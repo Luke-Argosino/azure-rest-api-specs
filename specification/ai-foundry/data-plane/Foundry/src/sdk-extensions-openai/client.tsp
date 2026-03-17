@@ -47,6 +47,11 @@ namespace Azure.AI.Projects {
   // Root client
   // --------------------------------------------------------------------------------
   @@clientName(OpenAI, "ProjectOpenAIClient");
+  @@clientInitialization(Azure.AI.Projects.OpenAI,
+    {
+      initializedBy: InitializedBy.parent | InitializedBy.individually,
+    }
+  );
 
   // --------------------------------------------------------------------------------
   // Fix the xref.
